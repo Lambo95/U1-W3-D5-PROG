@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>Calculator - W3 - D5</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div class="calculator">
+
+            <input type="text" id="display" placeholder="0" readonly />
+
+            <div class="calculator-button">
+
+                <button onclick="writeToDisplay('+')" value="+">+</button>
+                <button onclick="writeToDisplay('-')" value="-">-</button>
+                <button onclick="writeToDisplay('*')" value="*">*</button>
+                <button onclick="writeToDisplay('/')" value="/">/</button>
+                <button onclick="writeToDisplay('7')">7</button>
+                <button onclick="writeToDisplay('8')">8</button>
+                <button onclick="writeToDisplay('9')">9</button>
+                <button onclick="writeToDisplay('4')">4</button>
+                <button onclick="writeToDisplay('5')">5</button>
+                <button onclick="writeToDisplay('6')">6</button>
+                <button onclick="writeToDisplay('1')">1</button>
+                <button onclick="writeToDisplay('2')">2</button>
+                <button onclick="writeToDisplay('3')">3</button>
+                <button onclick="writeToDisplay('0')">0</button>
+                <button onclick="writeToDisplay('.')">.</button>
+                <button onclick="deleteDisplay()">C</button>
+
+            </div>
+            <button onclick="showResult()" id="result-button">=</button>
+
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
