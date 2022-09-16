@@ -16,37 +16,42 @@ function deleteDisplay() {
 
 //METODO SENZA EVAL
 
-let text;
-let values;
-let result;
+//PROVA PRIMO METODO (NON FUNZIONA)
 
-function writeToDisplay(element) {
-  text = document.getElementById("display").value += element;
-  return text;
-}
+//let text;
+// let values;
+// let result;
 
-function operation(text) {
-  //   let values;
-  //   let result;
-  if ((values = text.split("+"))) {
-    result = parseFloat(values[0]) + parseFloat(values[1]);
-    return result;
-  } else if ((values = text.split("-"))) {
-    result = parseFloat(values[0]) - parseFloat(values[1]);
-    return result;
-  } else if ((values = text.split("*"))) {
-    result = parseFloat(values[0]) * parseFloat(values[1]);
-    return result;
-  } else if ((values = text.split("/"))) {
-    result = parseFloat(values[0]) / parseFloat(values[1]);
-    return result;
-  }
-}
+// function writeToDisplay(element) {
+//   text = document.getElementById("display").value += element;
+//   return text;
+// }
 
-function showResult(result) {
-  result = operation(document.getElementById("display").value);
-  document.getElementById("display").value = result;
-}
+// function operation(text) {
+//   let values;
+//   let result;
+//   if (values === text.split("+")) {
+//     result = parseFloat(values[0]) + parseFloat(values[1]);
+//     return result;
+//   } else if (values === text.split("-")) {
+//     result = parseFloat(values[0]) - parseFloat(values[1]);
+//     return result;
+//   } else if (values === text.split("*")) {
+//     result = parseFloat(values[0]) * parseFloat(values[1]);
+//     return result;
+//   } else if (values === text.split("/")) {
+//     result = parseFloat(values[0]) / parseFloat(values[1]);
+//     return result;
+//   }
+// }
+
+// function showResult(result) {
+//   result = operation(document.getElementById("display").value);
+//   document.getElementById("display").value = result;
+// }
+
+//PROVA SECONDO METODO (NON FUNZIONA)
+
 // function operationSum(text) {
 //   let values;
 //   if ((values = text.split("+"))) {
@@ -84,5 +89,58 @@ function showResult(result) {
 //   result = operationDiv(document.getElementById("display").value);
 //   document.getElementById("display").value = result;
 //   result = operationMol(document.getElementById("display").value);
+//   document.getElementById("display").value = result;
+// }
+
+//PROVA TERZO METODO (NON FUNZIONA)
+
+// let result;
+// let operator = document.getElementsByClassName("operator");
+// let number = document.getElementsByClassName("number");
+
+// function writeToDisplay(number) {
+//   text = document.getElementById("display").value += number;
+//   return text;
+// }
+
+// function operation(number, operator) {
+//   let result;
+//   if (operator === "+") {
+//     result = parseFloat(number[0]) + parseFloat(number[1]);
+//     return result;
+//   } else if (operator === "-") {
+//     result = parseFloat(number[0]) - parseFloat(number[1]);
+//     return result;
+//   } else if (operator === "*") {
+//     result = parseFloat(number[0]) * parseFloat(number[1]);
+//     return result;
+//   } else if (operator === "/") {
+//     result = parseFloat(number[0]) / parseFloat(number[1]);
+//     return result;
+//   }
+// }
+
+// function operation(number1, operator, number2)
+// function operation(text) {
+//   let result = "";
+//   if (operator === text.split("+")) {
+//     result = parseFloat(number1[0]) + parseFloat(number2[1]);
+//     console.log(result);
+//     return result;
+//   } else if (operator === text.split("-")) {
+//     result = parseFloat(number1[0]) - parseFloat(number2[1]);
+//     return result;
+//   } else if (operator === text.split("*")) {
+//     result = parseFloat(number1[0]) * parseFloat(number2[1]);
+//     return result;
+//   } else if (operator === text.split("/")) {
+//     result = parseFloat(number1[0]) / parseFloat(number2[1]);
+//     return result;
+//   }
+//   return result;
+// }
+
+// function showResult(result) {
+//   result = operation(document.getElementById("display").value);
 //   document.getElementById("display").value = result;
 // }
