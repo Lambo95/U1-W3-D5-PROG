@@ -1,18 +1,88 @@
 //METODO CON EVAL VISTO IN CLASSE
 
+function writeToDisplay(element) {
+  document.getElementById("display").value += element;
+}
+
+function showResult() {
+  let result = eval(document.getElementById("display").value);
+
+  document.getElementById("display").value = result;
+}
+
+function deleteDisplay() {
+  document.getElementById("display").placeholder = "0";
+  document.getElementById("display").value = "";
+}
+
+//HO PROVATO A FAR SPARIRE IL RISULTATO UNA VOLTA CHE L'UTENTE PREME UN NUOVO TASTO
+//PROVA 1* (NON FUNZIONA)
+
+//let result;
+
 // function writeToDisplay(element) {
-//   document.getElementById("display").value += element;
+//   if (document.getElementById("display").value === "") {
+//     document.getElementById("display").value += element;
+//   } else if (document.getElementById("display").value === result) {
+//     document.getElementById("display").value = "";
+//   }
+// }
+
+//PROVA 2* (NON FUNZIONA)
+// let result;
+
+// function writeToDisplay(element) {
+//   if (document.getElementById("display").value === "") {
+//     let numbers = (document.getElementById("display").value += element);
+//   } else if (document.getElementById("display").value === numbers) {
+//     document.getElementById("display").value += element;
+//   } else if (document.getElementById("display").value === result) {
+//     document.getElementById("display").value = "";
+//   }
 // }
 
 // function showResult() {
-//   let result = eval(document.getElementById("display").value);
+//   result = eval(document.getElementById("display").value);
 //   document.getElementById("display").value = result;
+//   return result;
 // }
 
-function deleteDisplay() {
-  document.getElementById("display").placeholder = "0"; // Da ora in poi, placeholder è '0'
-  document.getElementById("display").value = ""; // Stringa vuota
-}
+// function deleteDisplay() {
+//   document.getElementById("display").value = "";
+// }
+
+//PROVA 3 (NON FUNZIONA)
+
+// let result;
+
+// if (document.getElementById("display").value === "") {
+//   function writeToDisplay(element) {
+//     document.getElementById("display").value += element;
+//   }
+// }
+
+// if (document.getElementById("display").value === result);
+// {
+//   document.getElementById("display").value = "";
+// }
+
+//   if (document.getElementById("display").value === "") {
+//     let numbers = (document.getElementById("display").value += element);
+//   } else if (document.getElementById("display").value === numbers) {
+//     document.getElementById("display").value += element;
+//   } else if (document.getElementById("display").value === result) {
+//     document.getElementById("display").value = "";
+//   }
+
+// function showResult() {
+//   result = eval(document.getElementById("display").value);
+//   document.getElementById("display").value = result;
+//   return result;
+// }
+
+// function deleteDisplay() {
+//   document.getElementById("display").value = "";
+// }
 
 //METODO SENZA EVAL
 
