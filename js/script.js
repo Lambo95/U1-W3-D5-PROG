@@ -7,12 +7,12 @@ function writeToDisplay(element) {
 function showResult() {
   try {
     let result = eval(document.getElementById("display").value);
-    //HO PROVATO AD AGGIUNGERE L'ERRORE SE IL RISULTATO E NAN (NON FUNZIONA)
-    // if (result === NaN) {
-    //   document.getElementById("display").value = "Error";
-    // } else {
-    //   document.getElementById("display").value = result;
-    // }
+    //HO PROVATO AD AGGIUNGERE L'ERRORE SE IL RISULTATO E NAN
+    if (isNaN(result)) {
+      document.getElementById("display").value = "Error";
+    } else {
+      document.getElementById("display").value = result;
+    }
   } catch (err) {
     document.getElementById("display").value = "Error";
   }
