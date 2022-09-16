@@ -1,13 +1,21 @@
-//METODO CON EVAL VISTO IN CLASSE
+//METODO CON EVAL (VISTO IN CLASSE)
 
 function writeToDisplay(element) {
   document.getElementById("display").value += element;
 }
 
 function showResult() {
-  let result = eval(document.getElementById("display").value);
-
-  document.getElementById("display").value = result;
+  try {
+    let result = eval(document.getElementById("display").value);
+    //HO PROVATO AD AGGIUNGERE L'ERRORE SE IL RISULTATO E NAN (NON FUNZIONA)
+    // if (result === NaN) {
+    //   document.getElementById("display").value = "Error";
+    // } else {
+    //   document.getElementById("display").value = result;
+    // }
+  } catch (err) {
+    document.getElementById("display").value = "Error";
+  }
 }
 
 function deleteDisplay() {
